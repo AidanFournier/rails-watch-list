@@ -1,0 +1,16 @@
+<div class="m-5">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2><i class="fas fa-film pr-3"></i>Add a movie </h2>
+    <div class="my-5">
+      <%= link_to "Back", list_path(@list), class: "btn btn-primary border"  %>
+    </div>
+  </div>
+
+
+
+  <%= simple_form_for [ @list, @bookmark ] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit "Create bookmark", class: "btn btn-primary border" %>
+  <% end %>
+</div>
