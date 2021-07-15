@@ -1,0 +1,45 @@
+<nav class="navbar sticky-top navbar-expand-sm navbar-dark d-flex">
+  <div class="d-flex navbar-brand" id="navbar-right">
+    <%= link_to root_path do %>
+      <a class="navbar-brand title">
+        <!-- <img src="/rails-simple-airbnb⁩/app/assets/images/airbnb-brands.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+        <!-- <span><i class="fab fa-airbnb"></i></span> -->
+        <h1>WatchList</h1>
+      </a>
+    <% end %>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Find a movie" aria-label="Search">
+            <button class="btn btn-outline-light" style="color: #DB0E63" type="submit">Search</button>
+          </form>
+        </li>
+
+        <li class="nav-item dropdown navbar-dark">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Add movie</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Delete list</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" style="color: #DB0E63" href="#">Add movie</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--       <div class="my-2">
+        <%= link_to "Watchlist", root_path  %>
+      </div>
+ -->
