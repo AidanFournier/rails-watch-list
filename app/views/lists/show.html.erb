@@ -1,6 +1,12 @@
-<div class="list-page color-white" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url( <%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://images.unsplash.com/photo-1535016120720-40c646be5580?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80' %>)">
+<!-- <div class="list-page color-white" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url( <%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://images.unsplash.com/photo-1535016120720-40c646be5580?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80' %>)"> -->
 
-  <%= render 'nav' %>
+<% if @list.photo.attached? %>
+  <div class="page-header-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key %>')"></div>
+<% else %>
+    <div class="page-header-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1535016120720-40c646be5580?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')"></div>
+<% end %>
+
+  <%= render 'nav', list: @list, movies: @movies %>
 
   <div class="m-5">
 
