@@ -24,7 +24,11 @@
           Options
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Add movie</a>
+            <div>
+              <%= link_to new_list_bookmark_path(list) do %>
+                <i class="fas fa-plus"></i> Add list
+              <% end %>
+            </div>
             <div class="dropdown-divider"></div>
             <div class="mx-3">
              <%= link_to list_path(list), method: :delete, data: { confirm: "Are you sure?"} do %>
