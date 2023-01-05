@@ -1,7 +1,6 @@
 databases:
-  - name: WatchList
-    databaseName: WatchList
-    user: WatchList
+  - name: postgres
+  ipAllowList: []
 
 services:
   - type: web
